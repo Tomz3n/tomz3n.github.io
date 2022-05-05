@@ -25,10 +25,7 @@
 				</div>
 			</div>
 
-			<div id="spambox">
-				<center><h1>This is the spambox</h1></center>
-			</div>
-
+			<div id="spambox"></div>
 		</div>
 		<script type="text/javascript">
 			window.onload = function()
@@ -70,13 +67,13 @@
 			// A file has begun downloading
 			function DownloadingFile( file )
 			{
-				$("#spambox").prepend( "<span style='color:red'>" + file + "</span><br>");
+				$("#spambox").prepend( "Downloading file: <span style='color:red'>" + file + "</span><br>");
 			}
 
 			// This will not be called when DownloadingFile() is
 			function SetStatusChanged( status )
 			{
-				$("#spambox").prepend( status + "<br>");
+				$("#spambox").prepend( "Current status: " + status + ".<br>");
 			}
 		</script>
 
